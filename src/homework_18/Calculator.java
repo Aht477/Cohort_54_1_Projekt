@@ -14,45 +14,31 @@ Task 1
 
 public class Calculator {
 
-private static int  x;
-private static int  y;
-
-    public Calculator() {
+    public static double add(double a, double b) {
+        return a + b;
     }
 
-    public static int getX() {
-        return x;
+    public static double subtract(double a, double b) {
+        return a - b;
     }
 
-    public static void setX(int x) {
-        Calculator.x = x;
+    public static double multiply(double a, double b) {
+        return a * b;
     }
 
-    public static int getY() {
-        return y;
+    public static double divide(double a, double b) {
+        System.out.println("double division");
+        return a / b;
     }
 
-    public static void setY(int y) {
-        Calculator.y = y;
+    public static int divide(int a, int b) {
+        System.out.println("int division");
+        if (b == 0) {
+            // Todo хорошего решения нет.
+            return Integer.MAX_VALUE;
+        }
+        return a / b;
     }
 
-    public static int sumVar() {
-    int sum = x + y;
-    return sum;
-    }
 
-    public static int subtractionVar () {
-        int result = x - y;
-        return result;
-    }
-
-    public static double multiplicationVar () {
-        double result = (double) x * y;
-        return result;
-    }
-
-    public static double divisionVar () {
-        double result = (double) x / y;
-        return result;
-    }
 }
