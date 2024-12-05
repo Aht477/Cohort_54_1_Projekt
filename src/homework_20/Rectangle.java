@@ -9,38 +9,44 @@ package homework_20;
  */
 
 public class Rectangle extends Shape {
-
     private double width;
     private double height;
 
-    public void setDimensions(double width, double height){
+    public Rectangle(String name, String color) {
+        super(name, color);
+    }
+
+    public Rectangle(String name, String color, double width, double height) {
+        super(name, color);
         this.width = width;
         this.height = height;
     }
 
-    public double calculateArea(double width, double height){
-        return width * height;
-
-    }
-
-    public Double getHeight() {
-        return height;
-    }
-
-    public void setHeight(Double height) {
+    public void setDimensions(double width, double height) {
+        this.width = width;
         this.height = height;
     }
 
-    public Double getWidth() {
+    public double calculateArea() {
+        double area = width * height;
+        System.out.println("Area is: " + area);
+        return area;
+    }
+
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(Double width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-
-
-
+    public double getHeight() {
+        return height;
     }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+}
 

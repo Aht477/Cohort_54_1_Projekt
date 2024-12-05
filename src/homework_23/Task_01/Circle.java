@@ -8,12 +8,16 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    public Circle() {
+
+    }
+
 
     @Override
     public double figureArea() {
-        double circleArea = radius * radius * Math.PI;
-        System.out.println("The area of the circle is: " + circleArea);
-        return circleArea;
+        double figureArea = radius * radius * Math.PI;
+        System.out.println("The area of the circle is: " + figureArea);
+        return figureArea;
 
     }
 

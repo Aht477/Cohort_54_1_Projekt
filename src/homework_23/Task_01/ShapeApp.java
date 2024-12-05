@@ -19,10 +19,15 @@ public class ShapeApp {
         Triangle triangle = new Triangle(6, 8, 7);
         triangle.figureArea();
         triangle.figurePerimeter();
+        System.out.println("==========================");
 
-//        Shape[] shapes = new Shape[]{new Circle(), new Rectangle(), new Triangle()};
-//        for (int i = 0; i < shapes.length; i++);
+        double totalArea = 0;
+        Shape[] shapes = new Shape[]{new Circle(), new Rectangle(), new Triangle()};
+        for (int i = 0; i < shapes.length; i++) {
+            totalArea += shapes[i].figureArea();
 
+            System.out.println(totalArea);
+        }
 
     }
 

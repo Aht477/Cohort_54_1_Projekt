@@ -15,9 +15,9 @@ public class Rectangle extends Shape {
 
     @Override
     public double figureArea() {
-            double rectangleArea = width * height;
-            System.out.println("Rectangle Area is: " + rectangleArea);
-            return rectangleArea;
+            double figureArea = width * height;
+            System.out.println("Rectangle Area is: " + figureArea);
+            return figureArea;
 
         }
 

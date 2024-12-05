@@ -1,29 +1,25 @@
 package homework_20;
-/*
-
-Класс Circle (Круг)
-
-• Создайте класс Circle, который наследуется от Shape. • Добавьте поле radius типа double, которое хранит радиус круга.
-• Создайте метод setRadius(double radius), который устанавливает значение поля radius. • Создайте метод calculateArea(),
-который вычисляет и выводит площадь круга.
-
- */
 
 public class Circle extends Shape {
-
     private double radius;
+    public static final double PI = 3.14159;
 
-    public void setRadius(double radius){
+    public Circle(String name, String color, double radius) {
+        super(name, color);
         this.radius = radius;
     }
 
-    public double calculateArea(double radius) {
-        return Math.PI * (radius * radius);
-
+    public double calculateArea() {
+        double area = radius * radius * PI;
+        System.out.println("The area of the circle is: " + area);
+        return area;
     }
 
     public double getRadius() {
         return radius;
     }
 
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
 }

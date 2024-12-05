@@ -18,9 +18,9 @@ private double c;
 
     @Override
     public double figureArea() {
-        double triangleArea = (a * b) / 2;
-        System.out.println("The area of the Triangle is: " + triangleArea);
-        return triangleArea;
+        double figureArea = (a * b) / 2;
+        System.out.println("The area of the Triangle is: " + figureArea);
+        return figureArea;
 
     }
 
