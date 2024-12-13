@@ -22,45 +22,42 @@ System.out.println(pair.getFirst()); // Вывод: World
 System.out.println(pair.getSecond()); // Вывод: Hello
  */
 
-import lesson_26.methods.UtilsGeneric;
+public class Pair <T> {
+    private T first;
+    private T second;
 
-public class Pair <K, V> {
-    private K First;
-    private V Second;
+    public Pair(T first, T second) {
+        this.first = first;
+        this.second = second;
 
-
-
-
-
-    public Pair(K getFirst, V getSecond) {
-        this.First = getFirst;
-        this.Second = getSecond;
+    }
+    public void swap() {
+        T temp = first;
+        first = second;
+        second = temp;
     }
 
-    public static <T> void swap(T[] array, int idx1, int idx2) {
-        T temp = array[idx1];
-        array[idx1] = array[idx2];
-        array[idx2] = temp;
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "first=" + first +
+                ", second=" + second +
+                '}';
     }
 
-    public K getFirst() {
-        return First;
+    public T getFirst() {
+        return first;
     }
 
-    public void setFirst(K getFirst) {
-        this.First = getFirst;
+    public void setFirst(T first) {
+        this.first = first;
     }
 
-    public V getSecond() {
-        return Second;
+    public T getSecond() {
+        return second;
     }
 
-    public void setSecond(V getSecond) {
-        this.Second = getSecond;
+    public void setSecond(T second) {
+        this.second = second;
     }
-
-
-
-
-
 }
