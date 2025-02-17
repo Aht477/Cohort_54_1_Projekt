@@ -1,6 +1,6 @@
 package lists;
 
-public interface MyList<T> {
+public interface MyList<T> extends Iterable<T>{
 
 
     /**
@@ -96,5 +96,17 @@ public interface MyList<T> {
      */
     void set (int index, T value);
 
-
+    /**
+     * Метод, меняющий местами два элемента в массиве любого типа по индексам
+     * @param idx1 int
+     * @param idx2 int
+     */
+    public static <T> void swap(T[] array, int idx1, int idx2) {
+        T temp = array[idx1];
+        array[idx1] = array[idx2];
+        array[idx2] = temp;
+    }
 }
+/*
+Метод, меняющий местами два элемента в массиве любого типа по индексам
+*/

@@ -2,8 +2,9 @@ package lists;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class MyArrayList<T> implements MyList<T> {
+public class MyArrayList<T> implements MyList<T>{
     private T[] array;
     private int cursor; // присвоено значение по умолчание - 0;
 
@@ -266,6 +267,37 @@ public class MyArrayList<T> implements MyList<T> {
         return result;
     }
 
+
+    // Метод, меняющий местами два элемента в массиве любого типа по индексам
+    public static <T> void swap(T[] array, int idx1, int idx2) {
+        T temp = array[idx1];
+        array[idx1] = array[idx2];
+        array[idx2] = temp;
+    }
+
+    @Override
+    public Iterator <T> iterator() {
+        return new MyIterator();
+    }
+    private class MyIterator implements Iterator<T> {
+
+        private int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < cursor;
+        }
+
+        @Override
+        public T next() {
+            return  array[currentIndex++];
+        }
+//            T value = array[currentIndex];
+//            currentIndex++;
+//            return null;
+//        }
+
+    }
 }
 
 
@@ -287,5 +319,7 @@ ___
 11. Замена значения по индексу (есть индекс и новое значение) - возвращает старое значение ++
 12. Конструктор, который принимает обычный массив и создает MagicArray с такими же значениями ++
 13. Метод, который возвращает все значения в виде обычного массива - HW
+14. Метод, меняющий местами два элемента в массиве любого типа по индексам SWAP
+
 
  */

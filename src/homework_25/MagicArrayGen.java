@@ -8,11 +8,12 @@ public class MagicArrayGen <T> {
         array = (T[]) new Object[10];
     }
 
-    public MagicArrayGen(int[] ints) {
+    @SuppressWarnings("unchecked")
+    public MagicArrayGen(T[] ints) {
 
         if (ints != null) {
             this.array = (T[]) new Object[ints.length * 2];
-            addAll((T) ints);
+            addAll(ints);
         } else {
             this.array = (T[]) new Object[10];
         }
@@ -34,6 +35,7 @@ public class MagicArrayGen <T> {
         cursor++;
     }
 
+    @SuppressWarnings("unchecked")
     // Динамическое расширение массива
     private void expandArray() {
         System.out.println("Расширяем массив! cursor: " + cursor);
@@ -44,7 +46,7 @@ public class MagicArrayGen <T> {
          */
 
         // 1.
-        T[] newArray = (T[]) new Object [array.length * 2];
+        T[] newArray = (T[]) new Object[array.length * 2];
 
         // 2
         for (int i = 0; i < cursor; i++) {
@@ -68,7 +70,7 @@ public class MagicArrayGen <T> {
     }
 
     // Удаление элемента по индексу
-    public Object remove(int index) {
+    public T remove(int index) {
         /*
         1. Проверить валидность индекса (что он не отрицательный и меньше курсора
         2. Запомнить, какое значение находилось под этим индексом
@@ -80,7 +82,7 @@ public class MagicArrayGen <T> {
 
         if (index < 0 || index >= cursor) {
             // Индекс не валидный. Ничего в массиве не трогаем
-            return Integer.MIN_VALUE ; // Todo переписать потом
+            return null;
         }
 
         // 2. Запомнить значение
@@ -104,15 +106,15 @@ public class MagicArrayGen <T> {
     }
 
     // Возвращает значение по индексу
-    public Object get(int index) {
+    public T get(int index) {
         if (index >= 0 && index < cursor) {
             // Валидный индекс
             return array[index];
         }
 
         // Обработка не корректного индекса
-        return Integer.MIN_VALUE; // хорошего решения нет
-        //TODO Поправить обработку некорректного индекса
+        return null;
+
     }
 
     // [10, 100, 44, 100, 453, 100, 34]
@@ -141,12 +143,13 @@ public class MagicArrayGen <T> {
         return -1;
     }
 
+    @SuppressWarnings("unchecked")
     //  возвращает все значения в виде обычного массива
-    public int[] toArray() {
-        int[] result = new int[cursor];
+    public T[] toArray() {
+        T[] result = (T[])new Object[cursor];
 
         for (int i = 0; i < cursor; i++) {
-            result[i] = (int) array[i];
+            result[i] = array[i];
         }
 
         return result;
@@ -173,7 +176,7 @@ public class MagicArrayGen <T> {
     }
 
     // Замена значения по индексу - возвращает старое значение
-    public Object set(int index, T newValue) {
+    public T set(int index, T newValue) {
         /*
         1. Валидация индекса 0...cursor
         2. Вытащить старое значение - запомнить
@@ -183,8 +186,8 @@ public class MagicArrayGen <T> {
         // 1
         if (index < 0 || index >= cursor) {
             // Индекс не валидный
-            return Integer.MIN_VALUE;
-            // Todo поправить обработку не валидности индекса
+            return null;
+
         }
 
         T oldValue = array[index];
