@@ -45,6 +45,9 @@ public class Homework_40_Task_1 {
         Map<String, Integer> intersectionMap = intersection(map1, map2);
         intersectionMap.forEach((key, value) -> System.out.println(key + ": " + value));
 
+        System.out.println(map1);
+        System.out.println(map2);
+
     }
 
     public static Map<String, Integer> intersection(Map<String, Integer> map1, Map<String, Integer> map2) {
@@ -56,20 +59,6 @@ public class Homework_40_Task_1 {
         }
         return intersectionMap;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

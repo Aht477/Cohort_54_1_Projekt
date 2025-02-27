@@ -19,10 +19,10 @@ public class Homework_41_Task_01 {
 
     private static void sortedList() {
         //принимающий список чисел
-        List<Integer> listOfIntegers = List.of(-10, 0, 10, 25, 55, 60, 70, 80, 90, 100, 134, 160, 180, 200, 300, 400);
+        List<Integer> listOfIntegers = List.of(-10, 0, 10, 25, 55, 60, 69,70, 80, 90, 100, 134, 160, 180, 200, 300, 400);
 
         List<Integer> result = listOfIntegers.stream()
-                .filter(num -> num > 10 && num < 100)
+                .filter(num -> num > 10 && num < 100 && num % 2 == 0)
                 .sorted()
                 .collect(Collectors.toList());
 

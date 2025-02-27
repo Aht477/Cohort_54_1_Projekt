@@ -39,10 +39,10 @@ import java.util.Set;
 public class Homework_38_Task_2 {
     public static void main(String[] args) {
 
-        Set<String> set1 = new HashSet<>(List.of("Apple","Banana", "Cherry", "Orange", "Mango", "Grapes"));
-        Set<String> set2 = new HashSet<>(List.of("Orange", "Cherry", "Strawberry","Pineapple",   "Peach", "Pear"));
-//        Set<String> set1 = new HashSet<>(List.of("A", "B", "C", "D"));
-//        Set<String> set2 = new HashSet<>(List.of("C", "D", "E", "F"));
+//        Set<String> set1 = new HashSet<>(List.of("Apple","Banana", "Cherry", "Orange", "Mango", "Grapes"));
+//        Set<String> set2 = new HashSet<>(List.of("Orange", "Cherry", "Strawberry","Pineapple",   "Peach", "Pear"));
+        Set<String> set1 = new HashSet<>(List.of("A", "B", "C", "D"));
+        Set<String> set2 = new HashSet<>(List.of("C", "D", "E", "F"));
 
         System.out.println(union(set1,set2));
         System.out.println(intersection(set1, set2));
