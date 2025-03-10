@@ -9,7 +9,7 @@ public class Homework_39_Task_1_1 {
     String text = "Строка для 123456 количества вхождений слов" +
             ".\n Строка для 123456 и теста. и количества слов для проверки";
 
-    // System.out.println(text);
+    // System.out.println(payments.txt);
     Map<String, Integer> frequencyMap = frequencyDictionary(text);
     System.out.println(frequencyMap);
 

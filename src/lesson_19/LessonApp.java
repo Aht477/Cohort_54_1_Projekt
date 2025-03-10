@@ -21,7 +21,7 @@ public class LessonApp {
         final String text = "Hello World";
         String text1 = text.toUpperCase();
         System.out.println(text);
-        System.out.println("Новая строка, полученная с использование значения строки text: " + text1);
+        System.out.println("Новая строка, полученная с использование значения строки payments.txt: " + text1);
 
 
 

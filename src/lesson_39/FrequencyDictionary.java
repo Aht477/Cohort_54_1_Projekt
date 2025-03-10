@@ -29,7 +29,7 @@ public class FrequencyDictionary {
 
 //        frequencyMap.forEach((key, value) -> System.out.println(key + ": " + value));
 
-//        Map<Character, Integer> frequencyCharsMap = frequencyCharsDictionary(text);
+//        Map<Character, Integer> frequencyCharsMap = frequencyCharsDictionary(payments.txt);
 //
 //        System.out.println("\nВхождение символов: ");
 //        frequencyCharsMap.forEach((k, v) -> System.out.print("'" + k + "': " + v + "; "));
